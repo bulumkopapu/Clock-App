@@ -1,25 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
-h1 {
-  font-family: 'Kumbh Sans', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 32px;
-  color: #1E1F36;
-}
-
-p, a {
-  font-family: 'Kumbh Sans', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 14px;
-  color: #4B4C5F;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -33,185 +14,123 @@ a {
   /* no underline */
 }
 
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 200px;
+  color: #000000;
+  letter-spacing: -5px;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 68px;
+  color: #303030;
+  letter-spacing: 0px;
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  letter-spacing: 4.8px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+  letter-spacing: 4px;
+}
+
+h5 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;
+  letter-spacing: 0px;
+}
+
+h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  color: #303030;
+  letter-spacing: 3px;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;
+  letter-spacing: 0px;
+}
+
 .container {
-  max-width: 920px;
+  max-width: 1110px;
   margin: 0 auto;
 }
 
-body {
-  font-family: 'Kumbh Sans', sans-serif;
-  font-style: normal;
+.button {
+  background-color: #ffffff;
+  width: 146px;
+  border-radius: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 9px 8px 21px;
+  cursor: pointer;
+}
+
+.button p {
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 32px;
-  color: #1E1F36;
-  background: -webkit-gradient(linear, left top, left bottom, from(#B068E9), to(#6463E7));
-  background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+  font-size: 16px;
+  line-height: 28px;
+  color: #999999;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.button .circle {
+  width: 40px;
+  height: 40px;
+  background: #303030;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button .circle .arrow {
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+.button:hover .circle {
+  background: #999;
+}
+
+body {
   height: 100vh;
   overflow-x: hidden;
   padding: 0 24px 0 24px;
-}
-
-.main-card {
-  position: relative;
-  z-index: 0;
-  background: #FFFFFF;
-  width: 100%;
-  min-height: 535px;
-  -webkit-box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
-          box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
-  border-radius: 23px;
-  margin: 148px 0 85px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-bottom: 24px;
-}
-
-@media (min-width: 969px) {
-  .main-card {
-    margin-top: 129px;
-    min-height: 509px;
-    display: block;
-  }
-}
-
-.main-card .image-mobile-version {
-  position: absolute;
-  top: -108px;
-}
-
-@media (min-width: 969px) {
-  .main-card .image-mobile-version {
-    display: none;
-  }
-}
-
-.main-card .image-mobile-version img {
-  width: 100%;
-}
-
-.main-card .image-desktop-version {
-  display: none;
-}
-
-@media (min-width: 969px) {
-  .main-card .image-desktop-version {
-    display: block;
-  }
-}
-
-.main-card .image-desktop-version #base {
-  position: absolute;
-  top: 82px;
-}
-
-.main-card .image-desktop-version #main {
-  position: absolute;
-  top: 71px;
-}
-
-.main-card .image-desktop-version #box {
-  position: absolute;
-  top: 206px;
-  left: -90px;
-}
-
-.main-card .image-desktop-version #top-a {
-  position: absolute;
-  z-index: -10;
-}
-
-.main-card .image-desktop-version #top-b {
-  position: absolute;
-  z-index: -10;
-}
-
-.main-card-text {
-  padding-left: 24px;
-  padding-right: 24px;
-  width: 100%;
-  max-width: 350px;
-}
-
-@media (min-width: 969px) {
-  .main-card-text {
-    position: relative;
-    right: -485px;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-
-.main-card-text h1 {
-  padding-top: 132px;
-  padding-bottom: 40px;
-  text-align: center;
-}
-
-@media (min-width: 969px) {
-  .main-card-text h1 {
-    text-align: left;
-    padding-top: 65px;
-    padding-bottom: 45px;
-  }
-}
-
-.main-card-text .text-item {
-  border-bottom: 1px solid #E8E8EA;
-  padding-bottom: 18px;
-  margin-bottom: 18px;
-}
-
-.main-card-text .text-item .visibleText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.main-card-text .text-item .visibleText p:hover {
-  color: #F47B56;
-  cursor: pointer;
-}
-
-@media (min-width: 969px) {
-  .main-card-text .text-item .visibleText p {
-    font-size: 14px;
-  }
-}
-
-.main-card-text .text-item .visibleText .arrow {
-  border-left: 0.2rem solid #F47B56;
-  border-bottom: 0.2rem solid #F47B56;
-  width: 0.55rem;
-  height: 0.55rem;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-  cursor: pointer;
-}
-
-.main-card-text .text-item .jsText {
-  padding-top: 12px;
-  display: none;
-}
-
-.main-card-text .text-item .jsText p {
-  font-size: 12px;
-  line-height: 18px;
-  color: #787887;
+  background-color: #B4B4B4;
 }
 /*# sourceMappingURL=main.css.map */
