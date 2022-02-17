@@ -1,0 +1,12 @@
+@import 'reset';
+body {
+    @include fontFamilyLarge(bold);
+    background: $gradient;
+    height: 100vh;
+    overflow-x: hidden;
+    padding: 0 24px 0 24px;
+}
+
+
+
+

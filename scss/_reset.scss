@@ -1,0 +1,71 @@
+//FONT INSTALL
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+//COLOR VARIABLES
+$gradient: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);;
+$black: #1E1F36;
+$white: #ffffff;
+$accent: #F47B56;
+
+//FONT WEIGHTS
+$font-weights:(
+	"regular": 400,
+	"bold": 700
+); 
+
+@function weight($weight){
+	@return map-get($font-weights, $weight);
+}
+
+//FONT FAMILY
+@mixin fontFamilySmall ($fontWeight){
+    font-family: 'Kumbh Sans', sans-serif;
+    font-style: normal;
+    font-weight: weight($fontWeight);
+    font-size: 13px;
+    line-height: 14px;
+    color: #4B4C5F;
+}
+
+@mixin fontFamilyLarge ($fontWeight){
+    font-family: 'Kumbh Sans', sans-serif;
+    font-style: normal;
+    font-weight: weight($fontWeight);
+    font-size: 32px;
+    line-height: 32px;
+    color: $black;
+}
+
+h1 {
+    @include fontFamilyLarge(bold);
+}
+
+p, a {
+    @include fontFamilySmall(regular);
+}
+
+//CSS RESET
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+    text-decoration: none; /* no underline */
+}
+
+//CONTAINER SETTINGS
+.container {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+//MEDIA QUERIES
+@mixin desktop-screen {
+    @media (min-width: 969px) { @content }
+}
