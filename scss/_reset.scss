@@ -68,8 +68,27 @@ p {
 
 //MEDIA QUERIES
 @mixin desktop-screen {
-    @media (min-width: 969px) { @content }
+    @media (min-width: 1440px) { @content }
 }
+
+@mixin tablet-screen {
+    @media (min-width: 768px) { @content }
+}
+
+//BackgroundImage
+
+.bg-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/images/bg-day.png);
+    background-size: cover;
+    background-position: center;
+}
+
 
 //BUTTONS
 .button{
@@ -95,6 +114,7 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition-duration: 0.3s;
 
         .arrow {
             border: solid $white;
@@ -104,6 +124,9 @@ p {
             transform: rotate(45deg);
             margin-bottom: 2px;
         }
+        .arrow.active{
+            transform: rotate(225deg);
+        }
     }
 
     &:hover{
@@ -111,5 +134,4 @@ p {
             background: #999;  
         }
     }
-   
 }

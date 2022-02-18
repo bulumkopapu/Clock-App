@@ -3,8 +3,114 @@ body {
     height: 100vh;
     overflow-x: hidden;
     padding: 0 24px 0 24px;
-    background-color: #B4B4B4;
 }
+
+.random-quote-text {
+    margin-top: 32px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 573px;
+    @include tablet-screen {
+        margin-top: 80px;
+     }
+
+    img{
+        @include tablet-screen {
+           margin-top: 9px;
+        }
+    }
+
+    p {
+        @include font(12px, 22px, 400, 0px, $white);
+
+        @include tablet-screen {
+            @include font(18px, 28px, 400, 0px, $white);
+        }
+    }
+
+    #author {
+        font-weight: 700;
+        margin-top: 8px;
+    }
+}
+
+.time-location-display {
+    margin-top: 226px;
+    @include tablet-screen {
+        margin-top: 388px;
+    }
+    @include desktop-screen {
+        margin-top: 233px;
+    }
+    p {
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    .greeting {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 16px;
+        }
+
+        p {
+            @include font(15px, 25px, 400, 3px, $white);
+            @include tablet-screen {
+                @include font(18px, 28px, 400, 3.6px, $white);
+            }
+            @include desktop-screen {
+                @include font(20px, 28px, 400, 4px, $white);
+            }
+        }
+        
+        #text-addition{
+            display: none;
+            @include tablet-screen {
+                display: inline;
+            }
+        }
+    }
+
+    .time {
+
+        display: flex;
+        align-items: flex-end;
+
+        h1 {
+            margin-right: 13px; 
+            @include font(100px, 100px, 700, -2.5px, $white);
+            @include tablet-screen {
+                margin-right: 11px; 
+                @include font(175px, 175px, 700, -4.375px, $white);
+            }
+            @include desktop-screen {
+                @include font(200px, 200px, 700, -5px, $white);
+            }
+        }
+
+        p {
+            @include font(15px, 28px, 300, 0px, $white);
+            margin-bottom: 5px;
+
+            @include tablet-screen {
+                margin-bottom: 21px;
+                @include font(32px, 28px, 300, 0px, $white);
+            }
+            @include desktop-screen {
+                margin-bottom: 27px;
+                @include font(40px, 28px, 300, 0px, $white);
+            }
+
+        }
+
+    }
+
+
+}
+
+
 
 
 

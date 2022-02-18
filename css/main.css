@@ -83,6 +83,18 @@ p {
   margin: 0 auto;
 }
 
+.bg-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/images/bg-day.png);
+  background-size: cover;
+  background-position: center;
+}
+
 .button {
   background-color: #ffffff;
   width: 146px;
@@ -112,6 +124,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 0.3s;
 }
 
 .button .circle .arrow {
@@ -123,6 +136,10 @@ p {
   margin-bottom: 2px;
 }
 
+.button .circle .arrow.active {
+  transform: rotate(225deg);
+}
+
 .button:hover .circle {
   background: #999;
 }
@@ -131,6 +148,192 @@ body {
   height: 100vh;
   overflow-x: hidden;
   padding: 0 24px 0 24px;
-  background-color: #B4B4B4;
+}
+
+.random-quote-text {
+  margin-top: 32px;
+  display: flex;
+  align-items: flex-start;
+  max-width: 573px;
+}
+
+@media (min-width: 768px) {
+  .random-quote-text {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .random-quote-text img {
+    margin-top: 9px;
+  }
+}
+
+.random-quote-text p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #ffffff;
+  letter-spacing: 0px;
+}
+
+@media (min-width: 768px) {
+  .random-quote-text p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+    letter-spacing: 0px;
+  }
+}
+
+.random-quote-text #author {
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.time-location-display {
+  margin-top: 226px;
+}
+
+@media (min-width: 768px) {
+  .time-location-display {
+    margin-top: 388px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .time-location-display {
+    margin-top: 233px;
+  }
+}
+
+.time-location-display p {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.time-location-display .greeting {
+  display: flex;
+  align-items: center;
+}
+
+.time-location-display .greeting img {
+  margin-right: 16px;
+}
+
+.time-location-display .greeting p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ffffff;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 768px) {
+  .time-location-display .greeting p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+    letter-spacing: 3.6px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .time-location-display .greeting p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #ffffff;
+    letter-spacing: 4px;
+  }
+}
+
+.time-location-display .greeting #text-addition {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .time-location-display .greeting #text-addition {
+    display: inline;
+  }
+}
+
+.time-location-display .time {
+  display: flex;
+  align-items: flex-end;
+}
+
+.time-location-display .time h1 {
+  margin-right: 13px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 100px;
+  color: #ffffff;
+  letter-spacing: -2.5px;
+}
+
+@media (min-width: 768px) {
+  .time-location-display .time h1 {
+    margin-right: 11px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 175px;
+    line-height: 175px;
+    color: #ffffff;
+    letter-spacing: -4.375px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .time-location-display .time h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 200px;
+    color: #ffffff;
+    letter-spacing: -5px;
+  }
+}
+
+.time-location-display .time p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 28px;
+  color: #ffffff;
+  letter-spacing: 0px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  .time-location-display .time p {
+    margin-bottom: 21px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 28px;
+    color: #ffffff;
+    letter-spacing: 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .time-location-display .time p {
+    margin-bottom: 27px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 28px;
+    color: #ffffff;
+    letter-spacing: 0px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
