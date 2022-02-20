@@ -84,15 +84,23 @@ p {
     z-index: -10;
     width: 100vw;
     height: 100vh;
-    background-image: url(/images/bg-day.png);
+    background-image: url(/images/bg-night.png);
     background-size: cover;
     background-position: center;
-}
 
+    @include tablet-screen {
+        height: 150%;
+    }
+
+    @include desktop-screen {
+        min-height: 800px;
+    }
+}
 
 //BUTTONS
 .button{
     background-color:$white;
+    margin-top: 48px;
     width: 146px;
     border-radius: 28px;
     display: flex;
@@ -100,6 +108,14 @@ p {
     align-items: center;
     padding: 8px 9px 8px 21px;
     cursor: pointer;
+
+    @include tablet-screen {
+        margin-top: 80px;
+    }
+
+    @include desktop-screen {
+        margin-bottom: 8px;
+    }
 
     p {
         @include font(16px, 28px, 700, 5px, #999999);
