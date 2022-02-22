@@ -84,16 +84,18 @@ p {
     z-index: -10;
     width: 100vw;
     height: 100vh;
-    background-image: url(/images/bg-night.png);
+    background-image: url(/images/bg-day.png);
     background-size: cover;
     background-position: center;
 
     @include tablet-screen {
         height: 150%;
+        max-height: 1000px;
+        overflow-y: hidden;
     }
 
     @include desktop-screen {
-        min-height: 800px;
+        max-height: 800px;
     }
 }
 
