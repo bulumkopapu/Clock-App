@@ -138,6 +138,13 @@ body {
         margin-top: 16px;
         text-transform: uppercase;
 
+        @include tablet-screen {
+            margin-top: 0px;
+        }
+        @include desktop-screen {
+            margin-top: 16px;
+        }
+
         p {
             @include font(15px, 28px, 700, 3px, $white);
             @include tablet-screen {
@@ -148,23 +155,22 @@ body {
             }
         }
 
-        @include tablet-screen {
-            margin-top: 0px;
-        }
-        @include desktop-screen {
-            margin-top: 16px;
-        }
     }
 }
 
 .footer.active{
     left: 0px;
     @include tablet-screen {
-        top: 584px;
-        margin-top: 0px;
+        // top: 584px;
+        // margin-top: -420px;
+        // top: 100vh;
+        margin-top: 80px;
     }
     @include desktop-screen {
-        top: 400px;
+        // top: 400px;
+        // top: 100vh;
+        // margin-top: -320px;
+        margin-top: 0px;
     }
 }
 
@@ -179,7 +185,6 @@ body {
     padding: 48px 26px 32px 26px;
     @include tablet-screen {
         padding: 119px 26px 103px 26px;
-        
     }
     @include desktop-screen {
         padding: 74px 26px 74px 26px;

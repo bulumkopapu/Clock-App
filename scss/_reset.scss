@@ -89,13 +89,12 @@ p {
     background-position: center;
 
     @include tablet-screen {
-        height: 150%;
-        max-height: 1000px;
-        overflow-y: hidden;
+        min-height: 1100px;
     }
 
     @include desktop-screen {
-        max-height: 800px;
+        
+        height: 100vh;
     }
 }
 
